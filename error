@@ -1,0 +1,49 @@
+#0 plugins/CombatPlus/src/CombatPlus/Main(185): CombatPlus\Main->startCombatCountdown(object pocketmine\player\Player#83879, int 15)
+
+#1 plugins/CombatPlus/src/CombatPlus/Main(56): CombatPlus\Main->enterCombat(object pocketmine\player\Player#83879, object pocketmine\player\Player#225864)
+
+#2 pmsrc/src/event/RegisteredListener(61): CombatPlus\Main->onEntityDamage(object pocketmine\event\entity\EntityDamageByEntityEvent#225959)
+
+#3 pmsrc/src/event/Event(63): pocketmine\event\RegisteredListener->callEvent(object pocketmine\event\entity\EntityDamageByEntityEvent#225959)
+
+#4 pmsrc/src/entity/Entity(547): pocketmine\event\Event->call()
+
+#5 pmsrc/src/entity/Living(569): pocketmine\entity\Entity->attack(object pocketmine\event\entity\EntityDamageByEntityEvent#225959)
+
+#6 pmsrc/src/player/Player(2624): pocketmine\entity\Living->attack(object pocketmine\event\entity\EntityDamageByEntityEvent#225959)
+
+#7 pmsrc/src/player/Player(1989): pocketmine\player\Player->attack(object pocketmine\event\entity\EntityDamageByEntityEvent#225959)
+
+#8 pmsrc/src/network/mcpe/handler/InGamePacketHandler(569): pocketmine\player\Player->attackEntity(object pocketmine\player\Player#225864)
+
+#9 pmsrc/src/network/mcpe/handler/InGamePacketHandler(350): pocketmine\network\mcpe\handler\InGamePacketHandler->handleUseItemOnEntityTransaction(object pocketmine\network\mcpe\protocol\types\inventory\UseItemOnEntityTransactionData#204044)
+
+#10 pmsrc/vendor/nethergamesmc/bedrock-protocol/src/InventoryTransactionPacket(94): pocketmine\network\mcpe\handler\InGamePacketHandler->handleInventoryTransaction(object pocketmine\network\mcpe\protocol\InventoryTransactionPacket#230268)
+
+#11 pmsrc/src/network/mcpe/NetworkSession(509): pocketmine\network\mcpe\protocol\InventoryTransactionPacket->handle(object pocketmine\network\mcpe\handler\InGamePacketHandler#142252)
+
+#12 pmsrc/src/network/mcpe/NetworkSession(447): pocketmine\network\mcpe\NetworkSession->handleDataPacket(object pocketmine\network\mcpe\protocol\InventoryTransactionPacket#230268, string[130] ..............[.........ench........id.....lvl......id.....lvl......id.....lvl..)
+
+#13 pmsrc/src/network/mcpe/raklib/RakLibInterface(214): pocketmine\network\mcpe\NetworkSession->handleEncoded(string[90] .c.abd..&F9.f.&F.&.F. ..........!5/9...(.....".....S....KA..P>'.....B.L...o.v8.k)
+
+#14 pmsrc/vendor/pocketmine/raklib-ipc/src/RakLibToUserThreadMessageReceiver(40): pocketmine\network\mcpe\raklib\RakLibInterface->onPacketReceive(int 0, string[99] ..v.N.f..r.._....g.F"0Fa1;.B4..0.............@.WL.a.....XJH.J*.32,..|.4..3......)
+
+#15 pmsrc/src/network/mcpe/raklib/RakLibInterface(107): raklib\server\ipc\RakLibToUserThreadMessageReceiver->handle(object pocketmine\network\mcpe\raklib\RakLibInterface#226078)
+
+#16 pmsrc/src/TimeTrackingSleeperHandler(58): pocketmine\network\mcpe\raklib\RakLibInterface->pocketmine\network\mcpe\raklib{closure}()
+
+#17 pmsrc/vendor/pocketmine/snooze/src/SleeperHandler(120): pocketmine\TimeTrackingSleeperHandler->pocketmine{closure}()
+
+#18 pmsrc/src/TimeTrackingSleeperHandler(77): pocketmine\snooze\SleeperHandler->processNotifications()
+
+#19 pmsrc/vendor/pocketmine/snooze/src/SleeperHandler(79): pocketmine\TimeTrackingSleeperHandler->processNotifications()
+
+#20 pmsrc/src/Server(1785): pocketmine\snooze\SleeperHandler->sleepUntil(float 1781111457.6789)
+
+#21 pmsrc/src/Server(1148): pocketmine\Server->tickProcessor()
+
+#22 pmsrc/src/PocketMine(360): pocketmine\Server->__construct(object pocketmine\thread\ThreadSafeClassLoader#6, object pocketmine\utils\MainLogger#2, string[34] C:\Users\MrThe\Desktop\pocketmine, string[42] C:\Users\MrThe\Desktop\pocketmine\plugins)
+
+#23 pmsrc/src/PocketMine(383): pocketmine\server()
+
+#24 pmsrc(170): require(string[102] phar://C:/Users/MrThe/AppData/Local/Temp/PocketMine-MP-phar-cache.0/PMMB881.tmp.)
